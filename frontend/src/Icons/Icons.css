@@ -1,0 +1,35 @@
+.icons__container {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+
+  flex-direction: row;
+}
+.icons_img {
+  width: 50px;
+  height: 45px;
+  padding: 10px;
+}
+.icons_img_container {
+  background-color: white;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  margin-right: 10px;
+  box-shadow: 0px 1px 10px 1px grey;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.icons_img_container:hover {
+  background-color: yellow;
+}
+.icons_img_container > p {
+  font-size: 8;
+  color: grey;
+  margin-bottom: 5px;
+  margin-top: -7px;
+}
+.icons_img_container > p:hover {
+  color: black;
+}

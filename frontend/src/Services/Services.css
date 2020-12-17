@@ -1,0 +1,31 @@
+.services {
+  display: flex;
+  flex-direction: column;
+}
+.services__img__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.services__img__block {
+  display: flex;
+  flex-direction: column;
+  height: 250px;
+
+  width: 250px;
+  /* height: 100px; */
+}
+.services__images {
+  width: 70%;
+  border-radius: 40px;
+  height: 70%;
+  box-shadow: 1px 0px 20px 5px lightgray;
+  /* border: 1px solid grey; */
+}
+.services__images:hover {
+  transform: rotate(360deg);
+  transition-duration: 1200ms;
+}
+.services__img__block > span {
+  margin-top: 25px;
+}

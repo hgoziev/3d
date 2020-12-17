@@ -1,0 +1,11 @@
+export const ADD_TO_BASKET = "ADD_TO_BASKET";
+export const INCREMENT = "INCREMENT";
+export const DECREMENT = "DECREMENT";
+export const REMOVE_FROM_BASKET = "REMOVE_FROM_BASKET";
+export const ADD_USER = "ADD_USER";
+export const LOADING = "LOADING";
+export const DATABASE_FILL = "DATABASE_FILL";
+export const ITEMS_INFO = "ITEMS_INFO";
+export const EMPTY_BASKET = "EMPTY_BASKET";
+export const EMPTY_ITEMS_INFO = "EMPTY_ITEMS_INFO";
+export const NOTIFIER_REMOVE = "NOTIFIER_REMOVE";

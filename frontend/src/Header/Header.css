@@ -1,0 +1,140 @@
+.header {
+  align-items: center;
+  justify-content: center;
+}
+
+.cat > span {
+  font-size: large;
+  font-weight: 600;
+}
+
+.header__basket:hover {
+  color: orange;
+  cursor: pointer;
+}
+.header__basker__container {
+  display: flex;
+  flex-direction: row;
+}
+.header__circle__basket {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: rgb(44, 66, 79);
+  color: yellow;
+  text-align: center;
+  margin-left: -8px;
+  margin-top: -5px;
+}
+.header__circle__basket:hover {
+  background-color: rgb(30, 30, 30);
+  color: yellow;
+  cursor: pointer;
+}
+.header__circle__basket > span {
+  font-size: 14px;
+  font-weight: 600;
+}
+.menu {
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 5%;
+  flex: 0.3;
+}
+.cat {
+  display: flex;
+  flex: 1;
+  justify-content: space-around;
+  align-items: flex-end;
+  /* padding-top: 8px; */
+}
+
+.header__navlinks {
+  display: flex;
+  flex: 0.6;
+  justify-content: space-around;
+}
+
+.underline {
+  font-weight: 600;
+}
+.underline:hover {
+  color: gray;
+  cursor: pointer;
+}
+.link {
+  text-decoration: none;
+  color: black;
+}
+
+.header__toggle__menu {
+  display: flex;
+  position: absolute;
+  top: 1.2rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 21px;
+  width: 30px;
+}
+.header__toggle__menu .menu__bar {
+  height: 4px;
+  width: 100%;
+  background-color: black;
+  border-radius: 10px;
+}
+
+.basket__login__btn {
+  font-weight: 600;
+  color: rgb(44, 66, 79);
+}
+
+.basket__signup__btn {
+  background-color: yellow;
+  margin-left: 10px;
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 5px;
+  padding: 10px;
+  border: 1px solid rgb(44, 66, 79);
+  margin-top: -10px;
+  color: rgb(44, 66, 79);
+}
+
+.basket__login__btn:hover {
+  color: black;
+  cursor: pointer;
+}
+.basket__signup__btn:hover {
+  transform: translateY(-5px);
+  transition: ease-out;
+  transition-duration: 500ms;
+  cursor: pointer;
+  color: black;
+}
+
+@media (max-width: 516px) {
+  .header__toggle__menu {
+    display: flex;
+  }
+
+  .underline {
+    display: none;
+  }
+  .header__navlinks span img {
+    text-align: center;
+    width: 100%;
+  }
+
+  .basket__login__container {
+    display: none;
+  }
+  .header__navlinks a {
+    padding: 0.5rem 1rem;
+  }
+
+  .header__navlinks:active {
+    display: flex;
+  }
+}

@@ -1,0 +1,134 @@
+.order {
+  display: flex;
+  flex-direction: column;
+}
+.order__header {
+  border-bottom: 1px solid lightgray;
+  height: 70px;
+}
+.order__body {
+  display: flex;
+  flex-direction: row;
+  margin-left: 5%;
+  margin-bottom: 10%;
+  /* margin-top: 20px; */
+}
+.order__right {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  box-shadow: 1px 0px 20px 5px lightgray;
+  margin-left: 5%;
+  margin-right: 5%;
+  border-radius: 20px;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-bottom: 20px;
+  padding-top: 10px;
+  height: 300px;
+}
+.order__left {
+  display: flex;
+  flex-direction: row;
+  flex: 1.4;
+  box-shadow: 1px 0px 20px 5px lightgray;
+  width: 100%;
+  height: 140px;
+  align-items: center;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.order__left:hover {
+  transform: scale(1.02);
+  transition-duration: 800ms;
+  /* transition: ease-in-out; */
+}
+.order__left > img {
+  /* width: 300px; */
+  height: 120px;
+  width: 120px;
+  margin-left: 2%;
+  border-radius: 20px;
+}
+.order__item__details {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  padding-left: 20px;
+}
+.order__item__details > p {
+  color: rgb(30, 30, 30);
+  font-size: 18px;
+  font-weight: 500;
+}
+.order__item__details > span {
+  color: grey;
+  font-size: 14;
+}
+.order__left > p {
+  margin-left: 50%;
+  margin-right: 5%;
+  color: rgb(30, 30, 30);
+  font-weight: 700;
+}
+.order__title {
+  height: 70px;
+  width: 100%;
+  color: rgb(30, 30, 30);
+  margin-left: 5%;
+  margin-top: 40px;
+  font-size: 24px;
+  font-weight: 700;
+}
+.order__break {
+  height: 1px;
+  width: 100%;
+  background-color: lightgray;
+}
+.order__right > p {
+  color: rgb(30, 30, 30);
+  font-size: 20px;
+  font-weight: 500;
+}
+.order__right:hover {
+  transform: scale(1.02);
+  transition-duration: 800ms;
+}
+.order__total {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+}
+.order__discount {
+  display: flex;
+  justify-content: space-between;
+  color: grey;
+}
+.order__left__container {
+  display: flex;
+  flex-direction: column;
+  flex: 1.4;
+  width: 100%;
+}
+.order__checkout__btn {
+  margin-left: 18%;
+  margin-right: 18%;
+  padding-top: 10px;
+}
+.order__btn {
+  padding-right: 70px;
+  padding-left: 70px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 12px;
+  border: 1px solid orange;
+  background-color: yellow;
+  color: black;
+  font-weight: 600;
+}
+.order__btn:hover {
+  background-color: black;
+  color: yellow;
+}

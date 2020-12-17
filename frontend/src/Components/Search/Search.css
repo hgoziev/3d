@@ -1,0 +1,32 @@
+.search {
+  text-align: center;
+}
+
+.search__form {
+  margin-top: 50px;
+}
+.search__input {
+  width: 30%;
+  height: 40px;
+  border-radius: 5px;
+  /* border-color: lightgrey; */
+  border: 1px solid grey;
+  box-shadow: 1px 0px 20px 10px rgb(230, 230, 230);
+}
+.search__input:hover {
+  border: 1px solid yellow;
+}
+.search__submit {
+  padding: 13px;
+  box-shadow: 5px 0px 20px 10px rgb(230, 230, 230);
+  border-radius: 5px;
+  border: 1px solid grey;
+  background-color: yellow;
+  color: black;
+}
+.search__submit:hover {
+  border: 1px solid black;
+}
+.search__icons {
+  margin-top: 100px;
+}

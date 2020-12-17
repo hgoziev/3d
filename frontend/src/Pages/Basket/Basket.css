@@ -1,0 +1,164 @@
+.basket {
+  display: flex;
+  flex-direction: column;
+}
+.basket__header {
+  border-bottom: 1px solid lightgray;
+  height: 70px;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  background-color: white;
+}
+.basket__body {
+  display: flex;
+  flex-direction: row;
+  margin-left: 5%;
+  margin-bottom: 30px;
+  /* margin-top: 20px; */
+}
+.basket__right {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  box-shadow: 1px 0px 20px 5px lightgray;
+  margin-left: 5%;
+  margin-right: 5%;
+  border-radius: 20px;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-bottom: 20px;
+  padding-top: 10px;
+  height: 360px;
+}
+.basket__left {
+  display: flex;
+  flex-direction: row;
+  /* flex: 1.4; */
+  box-shadow: 1px 0px 20px 5px lightgray;
+  width: 100%;
+  height: 120px;
+  align-items: center;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.basket__left:hover {
+  transform: scale(1.018);
+  transition-duration: 500ms;
+  /* transition: ease-in-out; */
+}
+.basket__left > img {
+  /* width: 300px; */
+  height: 120px;
+  width: 120px;
+  margin-left: 2%;
+  border-radius: 20px;
+}
+.basket__item__details {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  padding-left: 20px;
+}
+.basket__item__details > p {
+  color: rgb(30, 30, 30);
+  font-size: 18px;
+  font-weight: 500;
+}
+.basket__item__details > span {
+  color: grey;
+  font-size: 14;
+}
+
+.basket__title {
+  height: 70px;
+  width: 100%;
+  color: rgb(30, 30, 30);
+  margin-left: 5%;
+  margin-top: 100px;
+  font-size: 20px;
+  font-weight: 700;
+}
+.basket__break {
+  height: 1px;
+  width: 100%;
+  background-color: lightgray;
+}
+.basket__right > p {
+  color: rgb(30, 30, 30);
+  font-size: 20px;
+  font-weight: 500;
+}
+.basket__right:hover {
+  transform: scale(1.018);
+  transition-duration: 500ms;
+}
+.basket__total {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+}
+.basket__discount {
+  display: flex;
+  justify-content: space-between;
+  color: grey;
+}
+.basket__left__container {
+  display: flex;
+  flex-direction: column;
+  flex: 1.4;
+  width: 100%;
+}
+.basket__checkout__btn {
+  margin-left: 18%;
+  margin-right: 18%;
+  padding-top: 10px;
+}
+.basket__btn {
+  padding-right: 70px;
+  padding-left: 70px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 12px;
+  border: 1px solid orange;
+  background-color: yellow;
+  color: black;
+  font-weight: 600;
+}
+.basket__btn:hover {
+  background-color: black;
+  color: yellow;
+}
+
+.basket__price__container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 40%;
+}
+.basket__price__container > p {
+  font-weight: 600;
+  font-size: 18px;
+}
+.delete__icon {
+  color: grey;
+}
+.delete__icon:hover {
+  color: red;
+}
+.basket__nodata {
+  width: 35%;
+  height: 25%;
+  align-self: center;
+  margin-top: 5%;
+}
+.basket__empty {
+  text-align: center;
+  font-weight: 600;
+  color: rgb(100, 100, 100);
+  font-family: monospace;
+  font-size: 18px;
+}
