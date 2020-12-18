@@ -1,8 +1,23 @@
 .banner {
-  background-color: rgb(220, 232, 236);
+  background-color: white;
+  background-image: linear-gradient(
+    315deg,
+    white 0%,
+    rgb(228, 0, 166) 20%,
+    rgb(48, 217, 255) 40%,
+    rgb(70, 177, 255) 50%,
+    rgb(127, 142, 255) 60%,
+    rgb(157, 172, 255) 74%,
+    rgb(187, 192, 255) 100%
+  );
+
   display: flex;
   flex-direction: row;
+  /* margin: 0px; */
   align-items: center;
+  z-index: 10;
+  clip-path: polygon(0% 0%, 100% 0, 100% 75%, 0 100%);
+  /* transform: skewX(5deg); */
 }
 
 .banner_left {
@@ -10,6 +25,7 @@
   align-items: center;
   justify-content: center;
   margin-left: 10%;
+  z-index: 0;
 }
 .banner_right {
   flex: 1;
@@ -25,6 +41,9 @@
   font-size: 16px;
   color: rgb(40, 40, 40);
 }
+.right > h1 {
+  color: rgb(17, 27, 65);
+}
 .circle {
   background-color: yellow;
   width: 280px;
@@ -38,8 +57,9 @@
 .img {
   width: 100%;
   height: 100%;
-  z-index: 1;
+  z-index: 0;
   /* margin-top: 20px; */
+  margin-top: 40px;
 }
 .banner__footer {
   width: 80%;

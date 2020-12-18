@@ -1,34 +1,82 @@
 .banner5 {
-  background-color: rgb(249, 229, 217);
-  /* background: linear-gradient(rgba(250, 0, 0, 0.5), transparent); */
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  border-top-left-radius: 50px;
-  border-bottom-left-radius: 50px;
-  margin-left: 100px;
-  margin-bottom: 150px;
+  background-color: white;
 }
 
-.interior5__des {
-  width: 120px;
-  height: 120px;
-  margin-left: 17px;
-  margin-bottom: 20px;
-  border: 2px solid black;
-}
-.interior5__des > img {
+.banner5__right {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
   width: 100%;
   height: 100%;
-  border-radius: 30px;
-  /* border: 3px solid rgb(220, 220, 220); */
+  justify-content: space-evenly;
+  align-items: center;
 }
-.interior5__des > img:hover {
-  /* border: 2px solid rgb(40, 40, 40); */
-  transform: rotate(360deg);
-  transition-duration: 1200ms;
+.banner5__img__container {
+  display: flex;
+  flex-direction: column;
+  width: 280px;
+  border-radius: 20px;
+  height: 350px;
+  align-items: center;
+  margin-top: -240px;
+  justify-content: space-around;
+  background-image: linear-gradient(
+    white 0%,
+    rgb(250, 250, 250) 40%,
+    rgb(240, 240, 240) 60%,
+    rgb(230, 230, 230) 80%
+  );
+  box-shadow: 1px 0px 20px 1px rgb(187, 184, 198);
 }
-.banner5_title {
-  margin-right: 50px;
+.banner5__img__container:hover {
+  transition: ease-in-out;
+  transform: translateY(-15px);
+  transition-duration: 500ms;
+}
+.banner5__img {
+  width: 95%;
+  height: 70%;
+}
+.banner5__title {
+  display: flex;
+  flex-direction: column;
+  flex: 0.8;
+  height: 100%;
+  padding-left: 70px;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+.banner5__title > p {
+  font-size: 34px;
+  font-weight: 900;
+  color: rgb(17, 27, 65);
+}
+.banner5__title > span {
+  color: rgb(68, 80, 103);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 19px;
+  width: 80%;
+}
+.banner5__btn {
+  width: 45%;
+  margin-top: 20px;
+  padding: 8px;
+  border-radius: 20px;
+  border: 1px solid;
+  font-weight: 600;
+  font-size: 16px;
+  font-family: monospace;
+  color: white;
+  background-color: rgb(129, 0, 255);
+}
+.banner5__btn:hover {
+  background-color: rgb(17, 27, 65);
+  cursor: pointer;
+}
+#banner5Left {
+  margin-top: 70px;
 }

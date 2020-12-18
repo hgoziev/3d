@@ -1,34 +1,48 @@
 import React from "react";
 import "./Services.css";
-import S from "../assets/cartoon.jpg";
-import Cartoon from "../assets/mult.jpg";
-import In from "../assets/cup.jpg";
+import S from "../assets/cl.png";
+import Zoo from "../assets/zoo.png";
 import House from "../assets/house.jpg";
+import Ind from "../assets/banner5.jpg";
 
 function Services() {
   return (
     <div className="services">
-      <h3 className="services__title">Our Services</h3>
+      <p className="services__title">Our Services</p>
       <div className="services__img__container">
         <div className="services__img__block">
-          <h4>3D Modles</h4>
+          <p>Video Game</p>
           <img src={S} alt="" className="services__images" />
-          <span>3D models for your game </span>
+          <span>
+            Anything you need for your video game like characters, places and
+            other details.
+          </span>
         </div>
         <div className="services__img__block">
-          <h4>3D Modles</h4>
-          <img src={In} alt="" className="services__images" />
-          <span>3D models for your game </span>
+          <p>Animated Movies</p>
+
+          <img src={Zoo} alt="" className="services__images" />
+          <span>
+            Short animated movies and advertisements for your business and
+            production.
+          </span>
         </div>
         <div className="services__img__block">
-          <h4>3D Modles</h4>
-          <img src={Cartoon} alt="" className="services__images" />
-          <span>3D models for your game </span>
-        </div>
-        <div className="services__img__block">
-          <h4>3D Modles</h4>
+          <p>Home Decoration</p>
+
           <img src={House} alt="" className="services__images" />
-          <span>3D models for your game </span>
+          <span>
+            Interior and Exterior 3D designs and home furnishings for
+            decoration.
+          </span>
+        </div>
+        <div className="services__img__block">
+          <p>Industrial Products</p>
+
+          <img src={Ind} alt="" className="services__images" />
+          <span>
+            Special custom made pixel perfect models for your products.
+          </span>
         </div>
       </div>
     </div>

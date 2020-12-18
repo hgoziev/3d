@@ -7,7 +7,6 @@ import Banner3 from "../../Banner3/Banner3";
 import Services from "../../Services/Services";
 import Banner4 from "../../Banner5/Banner5";
 import Footer from "../../Footer/Footer";
-import pointer from "../../assets/pointer.png";
 
 function Landing() {
   function TopEvent() {
@@ -24,18 +23,38 @@ function Landing() {
       document.getElementById("topButton").style.visibility = "hidden";
     }
   }
+
   window.onscroll = function () {
     scrollFunction();
   };
   window.onload = function () {
     scrollFunction();
   };
+
+  window.onscroll = function () {
+    if (document.getElementById("l")) {
+      let lh = document.getElementById("l");
+      if (
+        document.body.scrollTop > 70 ||
+        document.documentElement.scrollTop > 70
+      ) {
+        lh.style.backgroundColor = "white";
+        lh.style.borderBottomColor = "rgb(211, 211, 211)";
+        lh.style.borderBottomStyle = "solid";
+        lh.style.borderBottomWidth = "1px";
+      } else {
+        lh.style.backgroundColor = "transparent";
+        lh.style.borderBottomWidth = "0px";
+      }
+    }
+  };
+
   return (
     <div className="main__app">
-      <div className="landing__header">
+      <div className="landing__header" id="l">
         <Header />
       </div>
-      <div className="banner">
+      <div className="banner" id="wave">
         <Banner />
       </div>
       <div className="cat__icons">
@@ -53,10 +72,11 @@ function Landing() {
       <div className="landing__services" id="services">
         <Services />
       </div>
-
-      <div className="landing__footer">
+      <div className="landing__contact__form">
+        <h1>Contact form</h1>Contact form
+      </div>
+      <div className="landing__footer" id="lf">
         <Footer />
-        <span>All right are reserved 2020</span>
       </div>
     </div>
   );

@@ -1,24 +1,28 @@
 import React from "react";
 import "./Banner5.css";
-import Industry from "../assets/industry.jpg";
-import Cup from "../assets/cup.jpg";
-import Blt from "../assets/blt.jpg";
+import Img from "../assets/3d.png";
+import Img2 from "../assets/3d1.png";
 
 function Banner5() {
   return (
     <div className="banner5">
-      <div className="banner5_title">
-        <h4>Interior and Exterior </h4>
-        <button className="btn">SEE ALL ITEMS</button>
+      <div className="banner5__title">
+        <p>Industrial 3D models</p>
+        <span>
+          High quality industry specific graphic designs and 3D models for your
+          business.
+        </span>
+        <button className="banner5__btn">EXPLORE NOW</button>
       </div>
-
-      <div className="interior5__des">
-        <img src={Industry} alt="" />
-        <img src={Cup} alt="" />
-      </div>
-      <div className="interior5__des">
-        <img src={Blt} alt="" />
-        <img src={Cup} alt="" />
+      <div className="banner5__right">
+        <div className="banner5__img__container" id="banner5Left">
+          <img src={Img} alt="" className="banner5__img" />
+          <span>Industrial products</span>
+        </div>
+        <div className="banner5__img__container">
+          <img src={Img2} alt="" className="banner5__img" />
+          <span>Home and Office furnishings</span>
+        </div>
       </div>
     </div>
   );

@@ -9,6 +9,7 @@ import { HashLink } from "react-router-hash-link";
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const notifier = useSelector((state) => state.notifier);
+
   return (
     <div className="header">
       <div className="cat">

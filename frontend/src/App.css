@@ -4,5 +4,7 @@
 
 .main__app {
   overflow-x: hidden;
+  overflow-y: hidden;
   font-family: sans-serif;
+  background-color: white;
 }

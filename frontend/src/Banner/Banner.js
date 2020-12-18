@@ -1,6 +1,6 @@
 import React from "react";
 import "./Banner.css";
-import Land from "../assets/land.jpg";
+import Land from "../assets/hh.png";
 import { Link } from "react-router-dom";
 
 function Banner() {
