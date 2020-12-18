@@ -7,6 +7,7 @@ import Banner3 from "../../Banner3/Banner3";
 import Services from "../../Services/Services";
 import Banner4 from "../../Banner5/Banner5";
 import Footer from "../../Footer/Footer";
+import Contact from "../../Components/Contact/Contact";
 
 function Landing() {
   function TopEvent() {
@@ -72,8 +73,8 @@ function Landing() {
       <div className="landing__services" id="services">
         <Services />
       </div>
-      <div className="landing__contact__form">
-        <h1>Contact form</h1>Contact form
+      <div className="landing__contact__form" id="contact">
+        <Contact />
       </div>
       <div className="landing__footer" id="lf">
         <Footer />
