@@ -11,21 +11,105 @@
   flex-direction: column;
   flex: 1;
   align-items: center;
+  margin-top: 50px;
+  margin-left: 50px;
+  margin-right: 50px;
+  box-shadow: 1px 0px 30px 15px lightgray;
+  border-radius: 50px;
+  background-color: rgb(17, 27, 65);
 }
+
 .contact__title {
-  text-align: left;
+  font-size: 34px;
+  padding-top: 20px;
+  margin-bottom: 50px;
+  font-weight: 900;
+  color: white;
 }
+
 .contact__left > form {
   display: flex;
   flex-direction: column;
+  padding-bottom: 60px;
   width: 55%;
+  outline: none;
+}
+.contact__left > form > label {
+  margin-bottom: 10px;
+  margin-left: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  color: lightgray;
+}
+.contact__input {
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  border: 3px solid white;
+  outline: none;
+  color: rgb(17, 27, 65);
+  font-weight: 600;
+}
+.contact__input:hover {
+  border: 3px solid rgb(0, 205, 255);
 }
 .contact__right {
   display: flex;
   flex: 1;
+  align-items: center;
+  justify-content: center;
 }
 
 .contact__img {
-  width: 300px;
-  height: 300px;
+  width: 450px;
+  height: 450px;
+}
+
+.contact__btn {
+  width: 55%;
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 20px;
+  border: 0px;
+  font-weight: 600;
+  font-size: 16px;
+  font-family: monospace;
+  color: rgb(17, 27, 65);
+  outline: none;
+  background-color: rgb(0, 205, 255);
+}
+.contact__btn:hover {
+  background-color: white;
+  cursor: pointer;
+}
+#submitLoading {
+  background-color: white;
+  color: grey;
+}
+.contact__modal__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.contact__modal__container > img {
+  width: 60px;
+  height: 60px;
+}
+.contact__modal__btn {
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 10px;
+  border: 0px;
+  color: white;
+  font-weight: 600;
+  background-color: rgb(16, 195, 255);
+  margin-top: 30px;
+}
+.contact__modal__btn:hover {
+  background-color: rgb(27, 86, 151);
+  cursor: pointer;
 }

@@ -1,25 +1,28 @@
 import React, { useState } from "react";
 import axios from "axios";
+import "./Payment.css";
 import { getBasketTotal } from "../../Redux/Reducers/Reducers";
 import { useSelector, useDispatch } from "react-redux";
 import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
 import { useHistory } from "react-router-dom";
 import styled from "@emotion/styled";
 import { EMPTY_BASKET } from "../../Redux/Actions/Types";
-
+import Img from "../../assets/payment.jpg";
+import Icon from "@material-ui/icons/ArrowBack";
 const CardElementContainer = styled.div`
   height: 40px;
+  margin-bottom: 20px;
   display: flex;
   align-items: center;
 
   & .StripeElement {
-    width: 100%;
+    width: 450px;
     padding: 15px;
   }
 `;
 function Payment() {
   const [isProcessing, setProcessingTo] = useState(false);
-  const [checkoutError, setCheckoutError] = useState();
+  const [disable, setDisable] = useState(false);
   const basket = useSelector((state) => state.basket);
   const dispatch = useDispatch();
   const history = useHistory();
@@ -36,8 +39,8 @@ function Payment() {
       const billingDetails = {
         name: name,
         email: email,
-        // price: price,
       };
+      setDisable(true);
       setProcessingTo(true);
 
       const { data: clientSecret } = await axios.post(
@@ -71,7 +74,9 @@ function Payment() {
     style: {
       base: {
         fontSize: "16px",
-        color: "#000",
+        color: "rgb(17, 27, 65)",
+        fontFamily: "monospace",
+        fontWeight: "700",
         "::placeholder": {
           color: "rgb(170,170,170)",
         },
@@ -83,6 +88,7 @@ function Payment() {
     },
     hidePostalCode: true,
   };
+
   const handleName = (e) => {
     e.preventDefault();
     setName(e.target.value);
@@ -91,29 +97,29 @@ function Payment() {
     e.preventDefault();
     setEmail(e.target.value);
   };
+
   return (
     <div>
-      <div
-        style={{
-          width: 400,
-          height: 400,
-          alignItems: "center",
-          justifyContent: "center",
-          marginLeft: 400,
-          marginTop: 100,
-        }}
-      >
-        <h2>Payment</h2>
-        <form onSubmit={handleSubmit}>
-          <p>Full Name</p>
-          <input type="text" value={name} onChange={(e) => handleName(e)} />
-          <p>Email</p>
-          <input type="text" value={email} onChange={(e) => handleEmail(e)} />
-          <CardElementContainer>
-            <CardElement options={cardElementOptions} />
-          </CardElementContainer>
-          <button>{isProcessing ? "Processing..." : `Pay $${price}`}</button>
-        </form>
+      <div className="payment">
+        <div className="payment__left">
+          <Icon className="payment__icon" onClick={() => history.goBack()} />
+          <img src={Img} alt="" className="payment__img" />
+        </div>
+        <div className="payment__right">
+          <p className="payment__title">Payment</p>
+          <form onSubmit={handleSubmit} className="payment__form">
+            <span>Full Name</span>
+            <input type="text" value={name} onChange={(e) => handleName(e)} />
+            <span>Email</span>
+            <input type="text" value={email} onChange={(e) => handleEmail(e)} />
+            <CardElementContainer>
+              <CardElement options={cardElementOptions} />
+            </CardElementContainer>
+            <button disabled={disable} id={disable ? "disabled" : null}>
+              {isProcessing ? "Processing..." : `Pay  $${price}`}
+            </button>
+          </form>
+        </div>
       </div>
     </div>
   );

@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "../../Header/Header";
 import "./Basket.css";
-import { Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { getBasketTotal } from "../../Redux/Reducers/Reducers";
 import nodata from "../../assets/nodata.jpg";
@@ -10,7 +10,10 @@ import BasketItems from "../../Components/BasketItems/BasketItems";
 function Basket() {
   const dispatch = useDispatch();
   const basket = useSelector((state) => state.basket);
-
+  const history = useHistory();
+  const goToPayment = () => {
+    history.push("/checkout");
+  };
   return (
     <div className="basket">
       <div className="basket__header">
@@ -60,9 +63,9 @@ function Basket() {
               <p>${getBasketTotal(basket)}</p>
             </div>
             <div className="basket__checkout__btn">
-              <Link to="/checkout" className="link">
-                <button className="basket__btn">Continue to Checkout</button>
-              </Link>
+              <button className="basket__btn" onClick={goToPayment}>
+                Continue to Checkout
+              </button>
             </div>
           </div>
         </div>
