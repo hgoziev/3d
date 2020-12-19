@@ -4,7 +4,6 @@ import contact from "../../assets/contact.jpg";
 import axios from "axios";
 import Modal from "react-modal";
 import checked from "../../assets/checked.png";
-import Check from "@material-ui/icons/CheckCircle";
 
 function Contact() {
   const [name, setName] = useState("");
@@ -82,7 +81,6 @@ function Contact() {
         <Modal isOpen={isOpen} contentLabel="My dialog" style={customStyles}>
           <div className="contact__modal">Message sent!</div>
           <div className="contact__modal__container">
-            {/* <Check fontSize="large" /> */}
             <img src={checked} alt="" />
             <button
               onClick={() => {
