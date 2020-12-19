@@ -61,6 +61,10 @@
 }
 .login__right > input {
   width: 65%;
+  color: rgb(25, 1, 66);
+  font-size: 18px;
+  font-weight: 600;
+  font-family: monospace;
 }
 .login__btn__container {
   display: flex;
@@ -123,6 +127,7 @@
   border-radius: 5px;
   font-weight: 500;
   font-size: 18px;
+  outline: none;
 }
 
 .login__create__btn:hover {
@@ -145,4 +150,8 @@
   font-size: 16px;
   font-weight: 600;
   color: rgb(44, 66, 79);
+}
+#error {
+  color: red;
+  font-size: 16px;
 }

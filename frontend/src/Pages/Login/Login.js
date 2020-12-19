@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 import "./Login.css";
-import { useHistory } from "react-router-dom";
+import { useHistory, Link } from "react-router-dom";
 import login from "../../assets/login.jpg";
 import Back from "@material-ui/icons/ArrowBack";
-import { Link } from "react-router-dom";
 import auth from "../../Firebase";
 
 function Login() {
   const history = useHistory();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [error, setError] = useState(null);
 
   const signIn = (e) => {
     e.preventDefault();
@@ -18,7 +18,9 @@ function Login() {
       .then((auth) => {
         history.push("/");
       })
-      .catch((err) => alert(err.message));
+      .catch((err) => {
+        setError(err.message);
+      });
   };
 
   const handleEmail = (e) => {
@@ -43,6 +45,7 @@ function Login() {
       </div>
       <div className="login__right">
         <p className="login__title">Login</p>
+        <span id="error">{error}</span>
         <span>Email</span>
         <input value={email} onChange={(e) => handleEmail(e)} />
         <span>Password</span>
@@ -61,7 +64,12 @@ function Login() {
         <div className="login__create__container">
           <p>New Member ? </p>
 
-          <button className="login__create__btn">Create Account</button>
+          <button
+            className="login__create__btn"
+            onClick={() => history.push("/signup")}
+          >
+            Create Account
+          </button>
         </div>
       </div>
     </div>

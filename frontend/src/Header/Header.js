@@ -11,9 +11,6 @@ function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const notifier = useSelector((state) => state.notifier);
 
-  const logout = () => {
-    auth.signOut();
-  };
   return (
     <div className="header">
       <div className="cat">
@@ -59,7 +56,10 @@ function Header() {
           </HashLink>
           <div className="basket__login__container">
             {auth.currentUser ? (
-              <button className="basket__signup__btn" onClick={logout()}>
+              <button
+                className="basket__signup__btn"
+                onClick={() => auth.signOut()}
+              >
                 Logout
               </button>
             ) : (

@@ -9,6 +9,7 @@ function SignUp() {
   const history = useHistory();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
 
   const handleEmail = (e) => {
     e.preventDefault();
@@ -28,8 +29,11 @@ function SignUp() {
           history.push("/");
         }
       })
-      .catch((err) => alert(err.message));
+      .catch((err) => {
+        setError(err.message);
+      });
   };
+
   return (
     <div className="login">
       <div className="login__left">
@@ -42,6 +46,7 @@ function SignUp() {
 
       <div className="login__right">
         <p className="login__title">Sign Up</p>
+        <span id="error">{error}</span>
         <span>Email</span>
         <input type="text" value={email} onChange={(e) => handleEmail(e)} />
         <span>Password</span>
