@@ -1,12 +1,35 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Login.css";
 import { useHistory } from "react-router-dom";
 import login from "../../assets/login.jpg";
 import Back from "@material-ui/icons/ArrowBack";
 import { Link } from "react-router-dom";
+import auth from "../../Firebase";
 
 function Login() {
   const history = useHistory();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const signIn = (e) => {
+    e.preventDefault();
+    auth
+      .signInWithEmailAndPassword(email, password)
+      .then((auth) => {
+        history.push("/");
+      })
+      .catch((err) => alert(err.message));
+  };
+
+  const handleEmail = (e) => {
+    e.preventDefault();
+    setEmail(e.target.value);
+  };
+  const handlePassword = (e) => {
+    e.preventDefault();
+    setPassword(e.target.value);
+  };
+
   return (
     <div className="login">
       <div className="login__left">
@@ -21,14 +44,18 @@ function Login() {
       <div className="login__right">
         <p className="login__title">Login</p>
         <span>Email</span>
-        <input />
+        <input value={email} onChange={(e) => handleEmail(e)} />
         <span>Password</span>
-        <input />
+        <input
+          value={password}
+          onChange={(e) => handlePassword(e)}
+          type="password"
+        />
         <div className="login__btn__container">
           <Link className="link" to="/forgot">
             <p>Forgot Password ? </p>
           </Link>
-          <button>Login</button>
+          <button onClick={signIn}>Login</button>
         </div>
 
         <div className="login__create__container">

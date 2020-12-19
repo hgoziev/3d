@@ -81,6 +81,7 @@
   width: 30%;
   margin-left: 80px;
   padding: 8px;
+  outline: none;
   background: linear-gradient(
     120deg,
     rgb(44, 66, 79) 15%,

@@ -5,11 +5,15 @@ import { Link } from "react-router-dom";
 import ShoppingBag from "@material-ui/icons/LocalMallOutlined";
 import { useDispatch, useSelector } from "react-redux";
 import { HashLink } from "react-router-hash-link";
+import auth from "../Firebase";
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const notifier = useSelector((state) => state.notifier);
 
+  const logout = () => {
+    auth.signOut();
+  };
   return (
     <div className="header">
       <div className="cat">
@@ -50,15 +54,24 @@ function Header() {
               </div>
             </div>
           </Link>
-
-          <span className="underline">contact</span>
+          <HashLink className="link" to="/#contact" smooth>
+            <span className="underline">Contact</span>
+          </HashLink>
           <div className="basket__login__container">
-            <Link to="/login" className="link">
-              <span className="basket__login__btn">Log In</span>
-            </Link>
-            <Link to="/signup" className="link">
-              <button className="basket__signup__btn">Signup</button>
-            </Link>
+            {auth.currentUser ? (
+              <button className="basket__signup__btn" onClick={logout()}>
+                Logout
+              </button>
+            ) : (
+              <>
+                <Link to="/login" className="link">
+                  <span className="basket__login__btn">Log In</span>
+                </Link>
+                <Link to="/signup" className="link">
+                  <button className="basket__signup__btn">Signup</button>
+                </Link>
+              </>
+            )}
           </div>
         </div>
       </div>

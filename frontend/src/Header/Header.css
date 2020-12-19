@@ -87,7 +87,7 @@
 
 .basket__login__btn {
   font-weight: 600;
-  color: rgb(44, 66, 79);
+  color: black;
 }
 
 .basket__signup__btn {
@@ -100,10 +100,11 @@
   border: 1px solid rgb(44, 66, 79);
   margin-top: -10px;
   color: rgb(44, 66, 79);
+  outline: none;
 }
 
 .basket__login__btn:hover {
-  color: black;
+  color: rgb(44, 66, 79);
   cursor: pointer;
 }
 .basket__signup__btn:hover {
