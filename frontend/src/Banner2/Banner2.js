@@ -5,7 +5,7 @@ import rab from "../assets/rab.png";
 import hand from "../assets/hand.png";
 import clash from "../assets/clash.png";
 import clash2 from "../assets/clash2.png";
-import mn2 from "../assets/mn2.jpg";
+import mn2 from "../assets/baby.png";
 import pubg from "../assets/pubg.png";
 import zoo from "../assets/zoo.png";
 
@@ -31,13 +31,23 @@ function Banner() {
           <img src={clash2} className="banner2__moving1__img" />
           <img src={pubg} className="banner2__moving1__img" />
           <img src={clash} className="banner2__moving1__img" />
+          <img
+            src={hand}
+            className="banner2__moving3__img"
+            id="banner2__extraimg"
+          />
         </div>
         <div className="banner2__moving2">
           <img src={moana} className="banner2__moving2__img" />
           <img src={zoo} className="banner2__moving2__img" />
           <img src={mn2} className="banner2__moving2__img" />
+          <img
+            src={dog}
+            className="banner2__moving3__img"
+            id="banner2__extraimg"
+          />
         </div>
-        <div className="banner2__moving3">
+        <div className="banner2__moving3" id="banner2__dontshow">
           <img src={hand} className="banner2__moving3__img" />
           <img src={dog} className="banner2__moving3__img" />
           <img src={rab} className="banner2__moving3__img" />

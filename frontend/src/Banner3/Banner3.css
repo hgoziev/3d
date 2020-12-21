@@ -11,7 +11,7 @@
 .banner3__left {
   display: flex;
   flex-direction: row;
-  flex: 0.6;
+  flex: 0.5;
   align-items: center;
   justify-content: center;
 }
@@ -109,4 +109,35 @@
   background-color: white;
   border: 1px solid white;
   cursor: pointer;
+}
+
+@media (max-width: 450px) {
+  .banner3 {
+    clip-path: polygon(0% 10%, 100% 0, 100% 90%, 0 100%);
+    border: 0xp;
+    flex-direction: column;
+  }
+  .banner3__img__container {
+    display: flex;
+    flex-direction: row;
+    flex: 0.4;
+
+    justify-content: center;
+    margin-left: 20px;
+  }
+  .banner3__img {
+    width: 90px;
+    border-radius: 30px;
+    height: 90px;
+    margin-left: 7px;
+    margin-right: 7px;
+  }
+  #g {
+    margin-bottom: -80px;
+  }
+  .banner3__left {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }

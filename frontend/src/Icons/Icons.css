@@ -2,7 +2,6 @@
   align-items: center;
   justify-content: center;
   display: flex;
-
   flex-direction: row;
 }
 .icons_img {
@@ -25,11 +24,51 @@
   background-color: yellow;
 }
 .icons_img_container > p {
-  font-size: 8;
   color: grey;
   margin-bottom: 5px;
   margin-top: -7px;
 }
 .icons_img_container > p:hover {
   color: black;
+}
+
+@media (max-width: 600px) and (min-width: 486px) {
+  .icons_img {
+    width: 30px;
+    height: 25px;
+    padding: 10px;
+  }
+  .icons_img_container > p {
+    font-size: 12px;
+  }
+}
+@media (max-width: 485px) and (min-width: 340px) {
+  .icons_img {
+    width: 25px;
+    height: 20px;
+    padding: 10px;
+  }
+  .icons_img_container > p {
+    font-size: 10px;
+    margin-right: 5px;
+  }
+  #airplane {
+    display: none;
+  }
+}
+
+@media (max-width: 339px) {
+  .icons_img {
+    width: 20px;
+    height: 15px;
+    padding: 10px;
+  }
+  .icons_img_container > p {
+    font-size: 8px;
+    /* margin-right: 3px;
+    margin-left: 3px; */
+  }
+  #airplane {
+    display: none;
+  }
 }

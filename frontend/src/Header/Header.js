@@ -44,7 +44,7 @@ function Header() {
           </Link>
 
           <Link className="link" to="/basket">
-            <div className="header__basker__container">
+            <div className="header__basket__container">
               <ShoppingBag className="underline" />
               <div className="header__circle__basket">
                 <span>{notifier == 0 ? "0" : notifier}</span>

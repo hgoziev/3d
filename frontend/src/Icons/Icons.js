@@ -12,7 +12,7 @@ import Car from "../assets/jeep.png";
 function Icons() {
   return (
     <div className="icons__container">
-      <div className="icons_img_container">
+      <div className="icons_img_container" id="airplane">
         <img src={AirCraft} alt="" className="icons_img" />
         <p>airplane</p>
       </div>

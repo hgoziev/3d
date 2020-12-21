@@ -15,7 +15,6 @@
 .banner2 {
   width: 100%;
   height: 700px;
-  /* margin-top: -50px; */
   z-index: 0;
 }
 .banner5 {
@@ -73,5 +72,17 @@
 @media (max-width: 516px) {
   .landing__header {
     border-bottom: 1px solid rgb(170, 170, 170);
+  }
+}
+
+@media (max-width: 779px) {
+  .banner {
+    height: 450px;
+  }
+}
+
+@media (max-width: 1060px) {
+  .banner2 {
+    height: 500px;
   }
 }

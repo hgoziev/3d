@@ -36,13 +36,15 @@
   flex-direction: column;
   width: 70%;
 }
-.right > p {
+.right > span {
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 16px;
   color: rgb(40, 40, 40);
 }
-.right > h1 {
+.right > p {
   color: rgb(17, 27, 65);
+  font-size: 32px;
+  font-weight: 600;
 }
 .circle {
   background-color: yellow;
@@ -80,6 +82,7 @@
   color: rgb(40, 40, 40);
   font-family: monospace;
   font-weight: 600;
+  outline: none;
 }
 .banner__input:hover {
   border: 1px solid black;
@@ -97,4 +100,56 @@
 .banner__submit:hover {
   border: 1px solid black;
   color: black;
+}
+
+@media (min-width: 780px) and (max-width: 1060px) {
+  .banner_left {
+    display: flex;
+    flex: 0.8;
+  }
+  .right {
+    width: 90%;
+  }
+  .right > p {
+    font-size: 26px;
+  }
+  .banner__input {
+    width: 60%;
+  }
+}
+
+@media (max-width: 779px) and (min-width: 600px) {
+  .banner_left {
+    display: none;
+  }
+  .banner_right {
+    padding-left: 50px;
+  }
+  .right {
+    width: 80%;
+  }
+  .banner__input {
+    width: 65%;
+  }
+}
+
+@media (max-width: 599px) {
+  .banner_left {
+    display: none;
+  }
+  .banner_right {
+    padding-left: 30px;
+  }
+  .right {
+    width: 90%;
+  }
+  .right > p {
+    font-size: 24px;
+  }
+  .right > span {
+    font-size: small;
+  }
+  .banner__input {
+    width: 55%;
+  }
 }

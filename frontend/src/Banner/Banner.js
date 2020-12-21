@@ -12,11 +12,11 @@ function Banner() {
 
       <div className="banner_right">
         <div className="right">
-          <h1>Professional 3D models</h1>
-          <p>
+          <p>Professional 3D models</p>
+          <span>
             Find the exact right 3D models for your needs, gaming, advertising,
             entertainment and 3D printing.
-          </p>
+          </span>
 
           <form className="banner__form">
             <input type="text" className="banner__input" placeholder="Search" />
