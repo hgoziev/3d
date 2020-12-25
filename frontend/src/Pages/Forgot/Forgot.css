@@ -146,3 +146,24 @@
   font-weight: 600;
   color: rgb(44, 66, 79);
 }
+@media (max-width: 600px) {
+  .forgot__left {
+    display: none;
+  }
+  .forgot__right {
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .forgot__btn__container > button {
+    margin-left: 0px;
+    width: 40%;
+    padding: 10px;
+  }
+  .forgot__btn__container {
+    width: 100%;
+    margin-left: 0px;
+    justify-content: center;
+  }
+}

@@ -20,9 +20,7 @@ function topButton() {
   window.onscroll = function () {
     scrollFunction();
   };
-  window.onload = function () {
-    scrollFunction();
-  };
+
   return (
     <img
       src={pointer}

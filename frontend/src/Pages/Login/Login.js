@@ -5,6 +5,21 @@ import login from "../../assets/login.jpg";
 import Back from "@material-ui/icons/ArrowBack";
 import auth from "../../Firebase";
 
+function ChangeColor() {
+  let lh = document.getElementById("l");
+  if (document.body.scrollTop > 70 || document.documentElement.scrollTop > 70) {
+    lh.style.backgroundColor = "white";
+    lh.style.borderBottomColor = "rgb(211, 211, 211)";
+    lh.style.borderBottomStyle = "solid";
+    lh.style.borderBottomWidth = "1px";
+  } else {
+    lh.style.backgroundColor = "transparent";
+    lh.style.borderBottomWidth = "0px";
+  }
+}
+window.onscroll = function () {
+  ChangeColor();
+};
 function Login() {
   const history = useHistory();
   const [email, setEmail] = useState("");
@@ -33,7 +48,7 @@ function Login() {
   };
 
   return (
-    <div className="login">
+    <div className="login" id="l">
       <div className="login__left">
         <Back className="login__back__icon" onClick={() => history.goBack()} />
         <div className="login__img__container">
@@ -44,6 +59,11 @@ function Login() {
         </div>
       </div>
       <div className="login__right">
+        <Back
+          className="login__back__icon"
+          onClick={() => history.goBack()}
+          id="backIcon"
+        />
         <p className="login__title">Login</p>
         <span id="error">{error}</span>
         <span>Email</span>
@@ -55,22 +75,19 @@ function Login() {
           type="password"
         />
         <div className="login__btn__container">
-          <Link className="link" to="/forgot">
-            <p>Forgot Password ? </p>
-          </Link>
           <button onClick={signIn}>Login</button>
+          <div className="login__create__container">
+            <button
+              className="login__create__btn"
+              onClick={() => history.push("/signup")}
+            >
+              Create Account
+            </button>
+          </div>
         </div>
-
-        <div className="login__create__container">
-          <p>New Member ? </p>
-
-          <button
-            className="login__create__btn"
-            onClick={() => history.push("/signup")}
-          >
-            Create Account
-          </button>
-        </div>
+        <Link className="link" to="/forgot">
+          <p className="login_Forgot">Forgot Password ? </p>
+        </Link>
       </div>
     </div>
   );

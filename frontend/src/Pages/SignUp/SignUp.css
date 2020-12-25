@@ -5,7 +5,9 @@
   height: 100%;
   width: 100%;
 }
-
+#backIcon {
+  display: none;
+}
 .login__left {
   flex: 1.2;
   display: flex;
@@ -141,4 +143,39 @@
   font-size: 16px;
   font-weight: 600;
   color: rgb(44, 66, 79);
+}
+@media (max-width: 600px) {
+  .login__left {
+    display: none;
+  }
+  .login__right {
+    flex: 1;
+    align-items: center;
+    text-align: left;
+    justify-content: center;
+  }
+  .login__right > span {
+    align-self: flex-start;
+    padding-left: 17%;
+    margin-bottom: 20px;
+  }
+  .login__right > input {
+    margin-bottom: 20px;
+  }
+  .sign__btn__container {
+    margin-left: 80px;
+    width: 100%;
+  }
+  .sign__create__container > h3 {
+    font-weight: 600;
+    align-items: center;
+    justify-self: center;
+  }
+  #backIcon {
+    display: flex;
+    padding-left: 40px;
+  }
+  .login__title {
+    margin-bottom: 50px;
+  }
 }

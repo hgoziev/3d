@@ -106,6 +106,11 @@ function Payment() {
           <img src={Img} alt="" className="payment__img" />
         </div>
         <div className="payment__right">
+          <Icon
+            className="login__back__icon"
+            onClick={() => history.goBack()}
+            id="backIcon"
+          />
           <p className="payment__title">Payment</p>
           <form onSubmit={handleSubmit} className="payment__form">
             <span>Full Name</span>

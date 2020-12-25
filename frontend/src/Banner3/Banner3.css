@@ -111,7 +111,7 @@
   cursor: pointer;
 }
 
-@media (max-width: 550px) {
+@media (max-width: 599px) {
   .banner3 {
     clip-path: polygon(0% 10%, 100% 0, 100% 90%, 0 100%);
     border: 0xp;
@@ -160,9 +160,10 @@
   }
   .banner3__btn {
     align-self: center;
+    width: 65%;
   }
 }
-@media (min-width: 551px) and (max-width: 1060px) {
+@media (min-width: 600px) and (max-width: 1060px) {
   .banner3__img {
     width: 130px;
     height: 130px;

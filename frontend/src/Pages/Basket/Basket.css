@@ -162,3 +162,55 @@
   font-family: monospace;
   font-size: 18px;
 }
+@media (max-width: 550px) {
+  .basket__body {
+    flex-direction: column;
+  }
+  .basket__left__container {
+    flex: 1;
+    width: 95%;
+  }
+  .basket__price__container {
+    margin-left: 30%;
+  }
+  .basket__item__details > p {
+    display: none;
+  }
+  .basket__item__details {
+    align-self: center;
+  }
+  .basket__price__container > p {
+    font-size: 22px;
+  }
+  .basket__right {
+    margin-left: 5px;
+    height: 400px;
+    margin-bottom: 50px;
+  }
+
+  .basket__total {
+    font-size: 20px;
+  }
+  .basket__checkout__btn {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  .basket__btn {
+    font-size: 18px;
+  }
+  .basket__empty {
+    font-size: 22px;
+  }
+  .basket__nodata {
+    width: 75%;
+    height: 65%;
+
+    margin-top: 10%;
+  }
+}
+
+@media (max-width: 350px) {
+  .basket__btn {
+    font-size: 14px;
+  }
+}

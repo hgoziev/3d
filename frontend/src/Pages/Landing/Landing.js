@@ -10,10 +10,6 @@ import Footer from "../../Footer/Footer";
 import Contact from "../../Components/Contact/Contact";
 
 function Landing() {
-  function TopEvent() {
-    document.body.scrollTop = 0; // For Safari
-    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-  }
   function scrollFunction() {
     if (
       document.body.scrollTop > 20 ||
@@ -25,31 +21,26 @@ function Landing() {
     }
   }
 
-  window.onscroll = function () {
-    scrollFunction();
-  };
-  window.onload = function () {
-    scrollFunction();
-  };
-
-  window.onscroll = function () {
-    if (document.getElementById("l")) {
-      let lh = document.getElementById("l");
-      if (
-        document.body.scrollTop > 70 ||
-        document.documentElement.scrollTop > 70
-      ) {
-        lh.style.backgroundColor = "white";
-        lh.style.borderBottomColor = "rgb(211, 211, 211)";
-        lh.style.borderBottomStyle = "solid";
-        lh.style.borderBottomWidth = "1px";
-      } else {
-        lh.style.backgroundColor = "transparent";
-        lh.style.borderBottomWidth = "0px";
-      }
+  function ChangeColor() {
+    let lh = document.getElementById("l");
+    if (
+      document.body.scrollTop > 70 ||
+      document.documentElement.scrollTop > 70
+    ) {
+      lh.style.backgroundColor = "white";
+      lh.style.borderBottomColor = "rgb(211, 211, 211)";
+      lh.style.borderBottomStyle = "solid";
+      lh.style.borderBottomWidth = "1px";
+    } else {
+      lh.style.backgroundColor = "transparent";
+      lh.style.borderBottomWidth = "0px";
     }
-  };
+  }
 
+  window.onscroll = function () {
+    scrollFunction();
+    ChangeColor();
+  };
   return (
     <div className="main__app">
       <div className="landing__header" id="l">

@@ -71,19 +71,11 @@
   flex-direction: row;
   margin-top: 30px;
 }
-.login__btn__container > p {
-  align-self: flex-end;
-  margin-top: 10px;
-  color: rgb(80, 80, 80);
-}
-.login__btn__container > p:hover {
-  color: black;
-}
 
 .login__btn__container > button {
   margin-top: 20px;
   width: 30%;
-  margin-left: 80px;
+  /* margin-left: 80px; */
   padding: 8px;
   outline: none;
   background: linear-gradient(
@@ -111,38 +103,29 @@
   color: rgb(44, 66, 79);
 }
 
-.login__create__container {
-  display: flex;
-  flex-direction: row;
-}
-
 .login__create__btn {
   margin-top: 20px;
-  width: 30%;
-  margin-left: 108px;
-  padding: 8px;
+  width: 100%;
+  margin-left: 30px;
+  padding: 10px;
   background-color: lightgray;
   color: rgb(44, 66, 79);
   border: 0px;
   border-radius: 5px;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 16px;
   outline: none;
 }
-
+.login_Forgot {
+  color: rgb(71, 73, 104);
+  margin-left: 120px;
+  margin-top: 10%;
+}
 .login__create__btn:hover {
   background-color: lightgray;
   color: gray;
 }
 
-.login__create__container > p {
-  align-self: flex-end;
-  margin-top: 10px;
-  color: rgb(80, 80, 80);
-}
-.login__create__container > p:hover {
-  color: black;
-}
 .login__join__text {
   text-align: center;
   margin-top: -25px;
@@ -154,4 +137,17 @@
 #error {
   color: red;
   font-size: 16px;
+}
+
+@media (max-width: 600px) {
+  .login__btn__container {
+    margin-left: -25px;
+  }
+  .login__btn__container > button {
+    width: 100%;
+  }
+  .login_Forgot {
+    margin-top: 40px;
+    color: rgb(71, 73, 104);
+  }
 }

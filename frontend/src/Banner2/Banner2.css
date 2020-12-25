@@ -242,17 +242,19 @@
   .banner2__left__container {
     width: 90%;
     height: 90%;
-    padding-left: 10px;
+    align-items: center;
     margin-bottom: 0px;
   }
   .banner2__left__container > p {
-    font-size: 20px;
+    font-size: 24px;
   }
   .banner2__left__container > span {
-    font-size: 10px;
+    font-size: 14px;
+    text-align: center;
   }
   .banner2__btn {
     width: 85%;
+    font-size: 14px;
   }
   .banner2__btn:hover {
     background-color: rgb(17, 27, 65);

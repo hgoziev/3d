@@ -7,12 +7,24 @@ import { useDispatch, useSelector } from "react-redux";
 import { HashLink } from "react-router-hash-link";
 import auth from "../Firebase";
 
+function ChangeColor() {
+  let lh = document.getElementById("l");
+  if (document.body.scrollTop > 70 || document.documentElement.scrollTop > 70) {
+    lh.style.backgroundColor = "white";
+  } else {
+    lh.style.backgroundColor = "transparent";
+  }
+}
+
+window.onscroll = function () {
+  ChangeColor();
+};
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const notifier = useSelector((state) => state.notifier);
 
   return (
-    <div className="header">
+    <div className="header" id="l">
       <div className="cat">
         <div className="menu">
           <Link to="/" className="link">

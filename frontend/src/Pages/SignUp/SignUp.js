@@ -45,6 +45,11 @@ function SignUp() {
       </div>
 
       <div className="login__right">
+        <Back
+          className="login__back__icon"
+          onClick={() => history.goBack()}
+          id="backIcon"
+        />
         <p className="login__title">Sign Up</p>
         <span id="error">{error}</span>
         <span>Email</span>

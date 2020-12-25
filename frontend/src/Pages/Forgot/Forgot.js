@@ -19,7 +19,13 @@ function Forgot() {
       </div>
 
       <div className="forgot__right">
+        <Back
+          className="login__back__icon"
+          onClick={() => history.goBack()}
+          id="backIcon"
+        />
         <p className="forgot__title">Reset Password</p>
+
         <span>Please enter your email to create a new password.</span>
         <span>Email</span>
         <input />

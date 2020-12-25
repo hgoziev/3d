@@ -84,3 +84,26 @@
   color: rgb(45, 141, 207);
   cursor: pointer;
 }
+
+@media (max-width: 600px) {
+  .payment__left {
+    display: none;
+  }
+  .payment__right {
+    margin-top: 50px;
+    width: 80%;
+    align-items: center;
+  }
+  .payment__form {
+    justify-content: center;
+    width: 80%;
+  }
+  .payment__form > input {
+    width: 100%;
+  }
+  .payment__form > button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 40px;
+  }
+}

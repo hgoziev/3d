@@ -28,9 +28,9 @@ function Banner() {
 
       <div className="banner2_right">
         <div className="banner2__moving1">
-          <img src={clash2} className="banner2__moving1__img" />
-          <img src={pubg} className="banner2__moving1__img" />
-          <img src={clash} className="banner2__moving1__img" />
+          <img src={clash2} className="banner2__moving1__img" alt="" />
+          <img src={pubg} className="banner2__moving1__img" alt="" />
+          <img src={clash} className="banner2__moving1__img" alt="" />
           <img
             src={hand}
             className="banner2__moving3__img"
@@ -38,9 +38,9 @@ function Banner() {
           />
         </div>
         <div className="banner2__moving2">
-          <img src={moana} className="banner2__moving2__img" />
-          <img src={zoo} className="banner2__moving2__img" />
-          <img src={mn2} className="banner2__moving2__img" />
+          <img src={moana} className="banner2__moving2__img" alt="" />
+          <img src={zoo} className="banner2__moving2__img" alt="" />
+          <img src={mn2} className="banner2__moving2__img" alt="" />
           <img
             src={dog}
             className="banner2__moving3__img"
@@ -48,9 +48,9 @@ function Banner() {
           />
         </div>
         <div className="banner2__moving3" id="banner2__dontshow">
-          <img src={hand} className="banner2__moving3__img" />
-          <img src={dog} className="banner2__moving3__img" />
-          <img src={rab} className="banner2__moving3__img" />
+          <img src={hand} className="banner2__moving3__img" alt="" />
+          <img src={dog} className="banner2__moving3__img" alt="" />
+          <img src={rab} className="banner2__moving3__img" alt="" />
         </div>
       </div>
     </div>
