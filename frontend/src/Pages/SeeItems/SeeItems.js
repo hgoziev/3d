@@ -11,7 +11,6 @@ import { Link, useLocation } from "react-router-dom";
 
 function SeeItems() {
   const { showItem } = useLocation();
-
   const DATA = [
     {
       title: "Monster UNiversity",

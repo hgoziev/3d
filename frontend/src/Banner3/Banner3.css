@@ -111,7 +111,7 @@
   cursor: pointer;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 550px) {
   .banner3 {
     clip-path: polygon(0% 10%, 100% 0, 100% 90%, 0 100%);
     border: 0xp;
@@ -121,7 +121,6 @@
     display: flex;
     flex-direction: row;
     flex: 0.4;
-
     justify-content: center;
     margin-left: 20px;
   }
@@ -139,5 +138,48 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+  .banner3__right {
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .banner3__right__container {
+    width: 90%;
+    text-align: center;
+  }
+  .banner3__right__container > p {
+    font-size: 26px;
+    font-weight: 900;
+    color: white;
+  }
+  .banner3__right__container > span {
+    color: rgb(158, 170, 191);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    width: 100%;
+  }
+  .banner3__btn {
+    align-self: center;
+  }
+}
+@media (min-width: 551px) and (max-width: 1060px) {
+  .banner3__img {
+    width: 130px;
+    height: 130px;
+  }
+  .banner3__right {
+    flex: 0.3;
+  }
+  .banner3__img__container {
+    margin-left: 5%;
+  }
+  .banner3__right__container {
+    width: 95%;
+  }
+  .banner3__right__container > p {
+    font-size: 28px;
+  }
+  .banner3__btn {
+    width: 100%;
   }
 }

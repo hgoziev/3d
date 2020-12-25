@@ -36,7 +36,7 @@ function Services() {
             decoration.
           </span>
         </div>
-        <div className="services__img__block">
+        <div className="services__img__block" id="servicesLast">
           <p>Industrial Products</p>
 
           <img src={Ind} alt="" className="services__images" />

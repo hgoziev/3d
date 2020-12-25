@@ -69,9 +69,18 @@
   padding: 8px;
 }
 
-@media (max-width: 516px) {
+@media (max-width: 600px) {
   .landing__header {
     border-bottom: 1px solid rgb(170, 170, 170);
+  }
+  .banner3 {
+    height: 750px;
+  }
+  .banner5 {
+    height: 600px;
+  }
+  .landing__services {
+    height: 2100px;
   }
 }
 

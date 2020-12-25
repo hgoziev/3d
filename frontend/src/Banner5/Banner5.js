@@ -17,11 +17,13 @@ function Banner5() {
       <div className="banner5__right">
         <div className="banner5__img__container" id="banner5Left">
           <img src={Img} alt="" className="banner5__img" />
-          <span>Industrial products</span>
+          <span className="banner5__right__text">Industrial products</span>
         </div>
         <div className="banner5__img__container">
           <img src={Img2} alt="" className="banner5__img" />
-          <span>Home and Office furnishings</span>
+          <span className="banner5__right__text">
+            Home and Office furnishings
+          </span>
         </div>
       </div>
     </div>

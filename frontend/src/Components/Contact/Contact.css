@@ -113,3 +113,19 @@
   background-color: rgb(27, 86, 151);
   cursor: pointer;
 }
+@media (max-width: 600px) {
+  .contact__right {
+    display: none;
+  }
+  .contact__left > form {
+    width: 80%;
+  }
+  .contact__left {
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 20px;
+  }
+  .contact__left > form > input {
+    border-radius: 10px;
+  }
+}

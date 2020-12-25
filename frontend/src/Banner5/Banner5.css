@@ -20,7 +20,7 @@
   flex-direction: column;
   width: 280px;
   border-radius: 20px;
-  height: 350px;
+  height: 370px;
   align-items: center;
   margin-top: -240px;
   justify-content: space-around;
@@ -40,6 +40,7 @@
 .banner5__img {
   width: 95%;
   height: 70%;
+  padding: 15px;
 }
 .banner5__title {
   display: flex;
@@ -79,4 +80,72 @@
 }
 #banner5Left {
   margin-top: 70px;
+}
+
+.banner5__right__text {
+  font-family: monospace;
+  padding: 5px;
+  text-align: center;
+  color: rgb(71, 73, 104);
+}
+@media (max-width: 600px) {
+  .banner5 {
+    flex-direction: column;
+    margin: 0px;
+  }
+  .banner5__img__container {
+    margin: 0px;
+    width: 150px;
+    height: 220px;
+  }
+  #banner5Left {
+    margin: 0px;
+  }
+  .banner5__title {
+    margin: 0px;
+    padding-left: 0px;
+    width: 80%;
+    flex: 0.5;
+    text-align: center;
+    align-items: center;
+  }
+  .banner5__title > p {
+    font-size: 26px;
+  }
+  .banner5__title > span {
+    font-size: 18px;
+    width: 100%;
+  }
+  .banner5__btn {
+    width: 65%;
+    padding: 10px;
+    font-size: 16px;
+    margin-top: 30px;
+  }
+  .banner5__img {
+    padding: 0px;
+  }
+}
+@media (max-width: 350px) {
+  .banner5__img__container {
+    margin: 0px;
+    width: 130px;
+    height: 190px;
+  }
+}
+
+@media (min-width: 1000px) and (max-width: 1060px) {
+  .banner5__img__container {
+    width: 230px;
+    height: 320px;
+  }
+}
+@media (max-width: 999px) and (min-width: 601px) {
+  .banner5__img__container {
+    width: 180px;
+    height: 270px;
+  }
+  .banner5__title > p {
+    font-size: 28px;
+  }
 }

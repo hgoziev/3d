@@ -161,8 +161,8 @@
   }
 }
 
-@media (min-width: 937px) {
+@media (min-width: 937px) and (max-width: 1060px) {
   .underline {
-    font-size: 12px;
+    font-size: 13px;
   }
 }
