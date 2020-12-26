@@ -38,8 +38,8 @@
 .menu {
   display: flex;
   justify-content: flex-start;
-  padding-left: 5%;
-  flex: 0.3;
+  padding-left: 10px;
+  flex: 0.19;
 }
 .cat {
   display: flex;
@@ -51,15 +51,42 @@
 
 .header__navlinks {
   display: flex;
-  flex: 0.6;
+  flex: 0.7;
   justify-content: space-around;
+}
+
+.header__toggle__show {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 500px;
+  width: 95%;
+  margin-right: 10px;
+  border-radius: 30px;
+  background-color: rgb(16, 195, 255);
+  transition: ease-in-out;
+  transform: translateY(75px);
+  transition-duration: 0.5s;
+}
+
+.header__closeIcon__none {
+  display: none !important;
+}
+.header__login__show {
+  margin-bottom: 10px;
+}
+.show__underline {
+  font-weight: 600;
+  color: rgb(25, 1, 66);
+  font-size: 20px;
 }
 
 .underline {
   font-weight: 600;
 }
 .underline:hover {
-  color: grey;
+  color: rgb(180, 180, 180);
   cursor: pointer;
 }
 .link {
@@ -80,7 +107,6 @@
   background-color: rgb(78, 232, 255);
   padding: 10px;
   border-radius: 10px;
-
   align-items: center;
 }
 
@@ -130,7 +156,12 @@
   .header__toggle__menu {
     display: flex;
   }
-
+  .header__closeIcon__show {
+    visibility: visible;
+    align-self: flex-end;
+    margin-right: 30px;
+    color: rgb(34, 0, 67);
+  }
   .underline {
     display: none;
   }

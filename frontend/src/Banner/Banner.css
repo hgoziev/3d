@@ -21,7 +21,7 @@
 }
 
 .banner_left {
-  flex: 1;
+  flex: 0.8;
   align-items: center;
   justify-content: center;
   margin-left: 10%;
@@ -74,7 +74,7 @@
   margin-top: 30px;
 }
 .banner__input {
-  width: 75%;
+  width: 65%;
   height: 40px;
   border-radius: 5px;
   border: 1px solid grey;

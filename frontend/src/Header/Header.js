@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Header.css";
-import basket from "../assets/basket.png";
+import CancelIcon from "@material-ui/icons/Cancel";
 import { Link } from "react-router-dom";
 import ShoppingBag from "@material-ui/icons/LocalMallOutlined";
 import { useDispatch, useSelector } from "react-redux";
@@ -19,21 +19,24 @@ function ChangeColor() {
 window.onscroll = function () {
   ChangeColor();
 };
+
 function Header() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [toggle, setToggle] = useState(false);
   const notifier = useSelector((state) => state.notifier);
 
   return (
     <div className="header" id="l">
       <div className="cat">
         <div className="menu">
-          <Link to="/" className="link">
-            <h3>Brand</h3>
-          </Link>
+          {!toggle && (
+            <Link to="/" className="link">
+              <h3>Brand</h3>
+            </Link>
+          )}
 
           <div
             className="header__toggle__menu"
-            onClick={() => setIsOpen(!isOpen)}
+            onClick={() => setToggle(!toggle)}
           >
             <span className="menu__bar"></span>
             <span className="menu__bar"></span>
@@ -41,32 +44,57 @@ function Header() {
           </div>
         </div>
 
-        <div className="header__navlinks">
+        <div className={toggle ? "header__toggle__show" : "header__navlinks"}>
+          <CancelIcon
+            className={
+              toggle ? "header__closeIcon__show" : "header__closeIcon__none"
+            }
+            onClick={() => setToggle(false)}
+          />
           <HashLink className="link" to="/#services" smooth>
-            <span className="underline">Our Services</span>
+            <span className={!toggle ? "underline" : "show__underline"}>
+              Our Services
+            </span>
           </HashLink>
           <Link className="link" to="/all">
-            <span className="underline">3D models</span>
+            <span className={!toggle ? "underline" : "show__underline"}>
+              3D models
+            </span>
           </Link>
           <Link className="link" to="/all">
-            <span className="underline">Interior design</span>
+            <span className={!toggle ? "underline" : "show__underline"}>
+              Interior & Exterior
+            </span>
           </Link>
           <Link className="link" to="/all">
-            <span className="underline">Animations</span>
+            <span className={!toggle ? "underline" : "show__underline"}>
+              Animations
+            </span>
           </Link>
 
+          <HashLink className="link" to="/#contact" smooth>
+            <span
+              className={!toggle ? "underline" : "show__underline"}
+              id="showContact"
+            >
+              Contact
+            </span>
+          </HashLink>
           <Link className="link" to="/basket">
             <div className="header__basket__container">
-              <ShoppingBag className="underline" />
+              <ShoppingBag
+                className={!toggle ? "underline" : "show__underline"}
+              />
               <div className="header__circle__basket">
                 <span>{notifier == 0 ? "0" : notifier}</span>
               </div>
             </div>
           </Link>
-          <HashLink className="link" to="/#contact" smooth>
-            <span className="underline">Contact</span>
-          </HashLink>
-          <div className="basket__login__container">
+          <div
+            className={
+              !toggle ? "basket__login__container" : "header__login__show"
+            }
+          >
             {auth.currentUser ? (
               <button
                 className="basket__signup__btn"
