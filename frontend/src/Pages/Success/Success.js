@@ -8,7 +8,7 @@ function Success() {
   const width = window.innerWidth;
   const height = window.innerHeight;
   return (
-    <div style={{ width: width, height: height }}>
+    <div style={{ width: width, height: height }} id="success__container__res">
       <Confetti numberOfPieces={400} width={width} height={height} />
       <p className="success__title">Payment successfull!</p>
       <div className="success__img__container">

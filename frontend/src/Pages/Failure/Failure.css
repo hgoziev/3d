@@ -47,3 +47,23 @@
   margin-top: 5%;
   font-size: 30px;
 }
+
+@media (max-width: 550px) {
+  .failure__img {
+    width: 400px;
+    height: 320px;
+  }
+  .failure__container {
+    margin-top: 30%;
+  }
+}
+
+@media (max-width: 350px) {
+  .failure__img {
+    width: 300px;
+    height: 220px;
+  }
+  .failure__container {
+    margin-top: 30%;
+  }
+}
