@@ -37,35 +37,7 @@ function SeeItems() {
       title: "Monster UNiversity",
       price: 5,
       image: Im,
-      id: 10,
-      format: "3d",
-    },
-    {
-      title: "Monster UNiversity",
-      price: 5,
-      image: Im,
-      id: 11,
-      format: "3d",
-    },
-    {
-      title: "Monster UNiversity",
-      price: 5,
-      image: Im,
-      id: 23,
-      format: "3d",
-    },
-    {
-      title: "Monster UNiversity",
-      price: 5,
-      image: Im,
-      id: 1,
-      format: "3d",
-    },
-    {
-      title: "Monster UNiversity",
-      price: 5,
-      image: Im,
-      id: 1,
+      id: 4,
       format: "3d",
     },
   ];
@@ -75,24 +47,25 @@ function SeeItems() {
   const database = useSelector((state) => state.database);
 
   let Arr = [];
-  basket.map((item) => {
-    Arr.push(item.id);
-  });
+  // basket.map((item) => {
+  //   Arr.push(item.id);
+  // });
 
   const renderItem = (item) => {
     const addToBasket = () => {
-      if (!Arr.includes(item.id)) {
-        dispatch({
-          type: ADD_TO_BASKET,
-          itemData: {
-            id: item.id,
-            image: item.image,
-            title: item.title,
-            format: item.format,
-            price: item.price,
-          },
-        });
-      }
+      // if (!Arr.includes(item.id)) {
+
+      dispatch({
+        type: ADD_TO_BASKET,
+        itemData: {
+          id: item.id,
+          image: item.image,
+          title: item.title,
+          format: item.format,
+          price: item.price,
+        },
+      });
+      // }
     };
     return (
       <div className="seeItems__photosContainer">
@@ -122,11 +95,6 @@ function SeeItems() {
       </div>
       <div className="seeItems__showdata">
         {DATA.map((item, index) => renderItem(item))}
-
-        <div className="seeItems__prevNext">
-          <span>previeous</span>
-          <span>next</span>
-        </div>
       </div>
       <div className="seeItems__footer">
         <Footer />
