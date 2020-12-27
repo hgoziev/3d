@@ -13,6 +13,7 @@ import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
 import Success from "./Pages/Success/Success";
 import Failure from "./Pages/Failure/Failure";
+import BasketIcon2 from "./Components/BasketIcon/BasketIcon2";
 const stripePromise = loadStripe(
   "pk_test_51HyYccLfcQoOgS4tLW6yFItAg4mpMEypqvGEh21kN9FYINPSpVs1RJ3ioImpS2vqWMVnfyZOe2VdyW1c4UWwBncJ00Fy1uk61F"
 );
@@ -56,6 +57,7 @@ function App() {
           </Route>
         </Switch>
         <TopButton />
+        <BasketIcon2 />
       </div>
     </Router>
   );

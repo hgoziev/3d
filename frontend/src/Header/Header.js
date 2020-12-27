@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import "./Header.css";
 import CancelIcon from "@material-ui/icons/Cancel";
 import { Link } from "react-router-dom";
-import ShoppingBag from "@material-ui/icons/LocalMallOutlined";
 import { useDispatch, useSelector } from "react-redux";
 import { HashLink } from "react-router-hash-link";
 import auth from "../Firebase";
+import BasketIcon from "../Components/BasketIcon/BasketIcon";
 
 function ChangeColor() {
   let lh = document.getElementById("l");
@@ -80,16 +80,7 @@ function Header() {
               Contact
             </span>
           </HashLink>
-          <Link className="link" to="/basket">
-            <div className="header__basket__container">
-              <ShoppingBag
-                className={!toggle ? "underline" : "show__underline"}
-              />
-              <div className="header__circle__basket">
-                <span>{notifier == 0 ? "0" : notifier}</span>
-              </div>
-            </div>
-          </Link>
+          <BasketIcon toggle={toggle} />
           <div
             className={
               !toggle ? "basket__login__container" : "header__login__show"

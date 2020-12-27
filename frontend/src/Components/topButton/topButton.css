@@ -2,19 +2,20 @@
   visibility: hidden;
   position: fixed;
   bottom: 20px;
-  right: 30px;
+  right: 25px;
   z-index: 99;
   border: none;
   outline: none;
-  background-color: #55198b;
+  background-color: white;
   color: white;
   cursor: pointer;
   padding: 13px;
   border-radius: 50%;
   font-size: 25px;
+  border: 1px solid gray;
 }
 
 #topButton:hover {
-  background-color: #000;
+  background-color: lightgray;
   transition: all ease-in-out 0.2s;
 }
