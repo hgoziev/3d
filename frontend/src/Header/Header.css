@@ -39,7 +39,15 @@
   display: flex;
   justify-content: flex-start;
   padding-left: 10px;
+
   flex: 0.19;
+}
+.header__brand__img {
+  margin-top: 10px;
+  width: 150px;
+  border-radius: 10px;
+  height: 50px;
+  vertical-align: top;
 }
 .cat {
   display: flex;

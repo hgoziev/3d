@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { HashLink } from "react-router-hash-link";
 import auth from "../Firebase";
 import BasketIcon from "../Components/BasketIcon/BasketIcon";
+import DIMENT from "../assets/DIMENT.png";
 
 function ChangeColor() {
   let lh = document.getElementById("l");
@@ -30,7 +31,7 @@ function Header() {
         <div className="menu">
           {!toggle && (
             <Link to="/" className="link">
-              <h3>Brand</h3>
+              <img src={DIMENT} alt="" className="header__brand__img" />
             </Link>
           )}
 
