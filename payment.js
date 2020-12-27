@@ -7,7 +7,7 @@ const stripe = require("stripe")(
 
 router.post("/", async (req, res) => {
   try {
-    const { amount, name, email } = req.body;
+    const { amount } = req.body;
     const paymentIntent = await stripe.paymentIntents.create({
       amount,
       currency: "usd",

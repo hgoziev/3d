@@ -44,7 +44,7 @@ function Payment() {
       setProcessingTo(true);
 
       const { data: clientSecret } = await axios.post(
-        "http://localhost:5000/payment",
+        "https://khago.herokuapp.com/payment",
         {
           amount: price * 100,
         }
