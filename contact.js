@@ -28,8 +28,8 @@ router.post("/", (req, res, next) => {
   let message = req.body.message;
 
   let mail = {
-    from: "3dmarketinc@gmail.com",
-    to: "3dmarketinc@gmail.com", //Change to email address that you want to receive messages on
+    from: // any email,
+    to: // any email,
     subject: "New Message from Contact Form",
     text: `
      Name : ${name} 
