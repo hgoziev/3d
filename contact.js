@@ -7,8 +7,8 @@ let transport = {
   service: "gmail",
   host: "smtp.gmail.com",
   auth: {
-    user: `${process.env.EMAIL}`,
-    pass: `${process.env.PASS}`,
+    user: //email
+    pass: //password for the email ,
   },
 };
 
