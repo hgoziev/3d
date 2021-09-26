@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 
 const stripe = require("stripe")(
-  "sk_test_51HyYccLfcQoOgS4tukckyuwujJV69GGJfurwpe55LBuNNnsSWRbTZ0t6CvrLiayvcOKFWVyif5Ds8D0h2sL7xZAH001Yk0yoRG"
+  //your stripe key here
 );
 
 router.post("/", async (req, res) => {
